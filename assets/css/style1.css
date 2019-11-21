@@ -1,0 +1,168 @@
+header{
+    background: rgb(53, 49, 49);
+    margin: 0;
+ }
+.header-main{
+align-content: center;
+vertical-align: middle;
+padding: 0px;
+margin:0px;
+}
+.text-header{
+    color: rgb(27, 147, 151);
+     }
+.name{
+    font-size: 300%;
+    font-size-adjust: auto;
+}
+.position{
+    font-size: x-large;
+    font-size-adjust: auto;
+}
+.info{
+    font-size: large;
+    font-size-adjust: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.list-no-bullets{
+    list-style-type:none;
+    margin-left: auto;
+    margin-right: auto;
+}
+a{
+    color: rgb(27, 147, 151);
+}
+.icon{
+    width: 1.5em;
+    height: auto;
+ }
+#photo{
+    width: 200px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    }
+ @media screen and (min-width:992px){
+    .list-no-bullets{
+        position: absolute;
+        top: 300%;
+        left: 20%;    
+    }
+    #photo{
+        width:320px ;
+    }
+    
+     
+ }
+ @media screen and(min-width:768px){
+    #photo{
+        width:250px ;
+    }
+ }
+ @media screen and(max-width:767px){
+    #photo{
+        width:200px ;
+    }
+ }
+ .container
+ {
+     padding-left: 0;
+
+ }
+ .text{
+    font-size: 1.2em;  
+ }
+ .text-exp{
+     color:white ;
+ }
+ .expierience-backgr{
+background-color:rgb(53, 49, 49);
+background-repeat: no-repeat;
+background-size: cover;
+    
+ }
+ .right-panel{
+
+ }
+ #timeline-content {
+    margin-top: @spacing;
+    text-align: center;  
+  }
+  
+  /* Timeline */
+  
+  .timeline {
+    border-left: @line solid @color-primary;
+    border-bottom-right-radius: @radius;
+    border-top-right-radius: @radius;    
+    background: fade(@color-light, 3%);
+    color: fade(white, 80%);
+    font-family: @font-text;  
+    margin: @spacing auto;  
+    letter-spacing: 0.5px;   
+    position: relative;
+    line-height: 1.4em;
+    font-size: 1.03em;   
+    padding: @spacing;   
+    list-style: none;
+    text-align: left;  
+    font-weight: 100;  
+    max-width: 30%; 
+    
+    h1 {
+     font-family: @font-title;
+     letter-spacing: 1.5px;
+     font-weight: 100;
+     font-size: 1.4em;    
+    }
+    
+    h2, h3 {
+     font-family: @font-title;
+     letter-spacing: 1.5px;
+     font-weight: 400;
+     font-size: 1.4em;
+    }
+    
+    .event {
+      border-bottom: 1px dashed fade(@color-light, 10%);
+      padding-bottom: (@spacing * 0.5);
+      margin-bottom: @spacing;  
+      position: relative;
+  
+      &:last-of-type { 
+        padding-bottom: 0;
+        margin-bottom: 0; 
+        border: none;      
+      }
+  
+      &:before, &:after {
+        position: absolute;
+        display: block;
+        top: 0;
+      }
+  
+      &:before {
+        left: (((@date * 0.6) + @spacing + @line + @dot + (@dotborder * 2)) * 1.5) * -1;    
+        color: fade(@color-light, 40%);    
+        content: attr(data-date);
+        text-align: right;
+        font-weight: 100;    
+        font-size: 0.9em;
+        min-width: @date;
+        font-family: @font-title;
+      }
+  
+      &:after {
+        box-shadow: 0 0 0 @dotborder fade(@color-primary,100%);    
+        left: (@spacing + @line + (@dot * 0.35)) * -1;        
+        background: lighten(@background,5%);    
+        border-radius: 50%;  
+        height: @dot;
+        width: @dot;
+        content: "";
+        top: 5px;
+      }
+    }
+  }
