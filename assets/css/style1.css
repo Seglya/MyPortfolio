@@ -148,3 +148,6 @@ ul.timeline > li:before {
 .text-right{
     text-align: right;
 }
+.progr-bar{
+    background-color: rgb(27, 147, 151);
+}
